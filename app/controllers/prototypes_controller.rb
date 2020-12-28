@@ -8,7 +8,12 @@ class PrototypesController < ApplicationController
   end
 
   def create
-    Prototype.create(message_params)
+    @prototype = Prototype.create(message_params)
+    if @prototype.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private

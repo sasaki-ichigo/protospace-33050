@@ -7,8 +7,8 @@ class PrototypesController < ApplicationController
     @prototype = Prototype.new
   end
 
-  def create(message_params)
-    
+  def create
+    Prototype.create(message_params)
   end
 
   private

@@ -20,7 +20,7 @@
           <%# ログインしているときは以下を表示するようにしましょう %>
           <% if user_signed_in? %>
             <div class="nav__right">
-              <%= "こんにちはユーザー名さん" %>
+              <%= "ようこそ#{current_user.name}さん" %>
               <%= link_to "ログアウト", root_path, class: :nav__logout %>
               <%= link_to "New Proto", root_path, class: :nav__btn %>
             </div>

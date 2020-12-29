@@ -17,6 +17,10 @@ class PrototypesController < ApplicationController
     end
   end
 
+  def show
+    
+  end
+
   private
 
   def prototype_params

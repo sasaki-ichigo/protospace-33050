@@ -1,7 +1,12 @@
 class CommentsController < ApplicationController
 
   def create
-    
+    comment = Comment.create(comment_params)
+    if comment.save
+      redirect_to "/prototype/#{comment.prototype.id}"
+    else
+      render 
+    end
   end
 
   private
